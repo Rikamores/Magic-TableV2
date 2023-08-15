@@ -60,6 +60,9 @@ body.background {
     color: #FFFFFF;
 }
 
+
+/* style.css */
+
 @font-face {
     font-family: 'Nunito';
     src: url('./fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype'); 
@@ -113,10 +116,30 @@ footer p {
     font-size: 16px;
     margin: 0;
 }
+
+/* Resto de tus estilos */
+
+
+/* style.css */
+
+/* ... (otros estilos) ... */
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Establece el alto mínimo del cuerpo para ocupar toda la ventana */
+}
+
+.content {
+    flex: 1; /* Permite que el contenido principal crezca y ocupe todo el espacio disponible */
+    padding: 20px;
+}
+.welcome-font{
+    width: 30%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
