@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+header {
+    padding: 10px 50px; /* Ajusta el padding según sea necesario */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+nav.menu {
+    position: absolute;
+    top: 40px; /* Coloca el nav en la parte superior */
+    right: 70px; /* Ajusta la posición según sea necesario */
+    margin-right: 470px;
+}
+.logo {
+    max-width: 20%; /* Ajusta el ancho máximo del logo en porcentaje */
+    height: auto;
+    /* Resto de los estilos */
+}
+
+body.background {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('./images/background.png'); /* Cambia la ruta a la ubicación de tu imagen */
+    background-size: cover;
+    color: #ffffff; /* Color de texto en el fondo de la imagen */
+}
+
+.menu a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+    font-size: 15px;
+}
+.mostrar-menu,
+.esconder-menu {
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#check {
+    display: none;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover {
+    color: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('./fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype'); 
+}
+.botton-reserva {
+    font-family: 'Nunito', sans-serif;
+    background-color: orange;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 9%;
+    
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .botton-reserva {
+        font-size: 12px;
+        padding: 8px 16px;
+        top: 75%; /* Ajusta la posición vertical en pantallas pequeñas */
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+/* style.css */
+
+/* ... (otros estilos) ... */
+
+footer {
+    background-color: #001A57;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Establece el alto mínimo del cuerpo para ocupar toda la ventana */
+}
+
+
+footer {
+    background-image: url('./images/footer-background.png'); /* Cambia la ruta a la ubicación de tu imagen */
+    color: white;
+    padding: 9px;
+    text-align: center;
+}
+
+footer p {
+    font-family: cursive;
+    font-size: 9px;
+    margin: 0;
+}
+
