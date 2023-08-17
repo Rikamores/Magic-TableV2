@@ -1,38 +1,47 @@
 * {
     margin: 0;
     padding: 0;
-   
 }
+
+@font-face {
+    font-family: 'Brittany';
+    src: url('./fonts/brittany_signature/BrittanySignature.ttf') format('truetype');
+}
+
+
 header {
-    padding: 10px 50px; /* Ajusta el padding según sea necesario */
+    padding: 10px 5%; /* Ajustado el padding a un valor relativo */
     color: white;
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos del header se envuelvan en pantallas pequeñas */
     justify-content: space-between;
     align-items: center;
     position: relative;
     font-family: 'Nunito', sans-serif;
 }
 
-
 nav.menu {
+
     position: absolute;
-    top: 40px; /* Coloca el nav en la parte superior */
-    right: 70px; /* Ajusta la posición según sea necesario */
-    margin-right: 470px;
+    top: 55px;
+    right: 700px; /* Ajustado el margen derecho a un valor relativo */
+    max-width: 600px; /* Limita el ancho máximo del menú */
+    width: 50%; /* Asegura que el menú ocupe el ancho completo */
+   
 }
+
 .logo {
-    max-width: 20%; /* Ajusta el ancho máximo del logo en porcentaje */
+    max-width: 25%;
     height: auto;
-    /* Resto de los estilos */
 }
 
 body.background {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('./images/background.png'); /* Cambia la ruta a la ubicación de tu imagen */
+    background-image: url('./images/background.png');
     background-size: cover;
-    color: #ffffff; /* Color de texto en el fondo de la imagen */
+    color: #ffffff;
 }
 
 .menu a {
@@ -43,6 +52,7 @@ body.background {
     transition: 0.4s;
     font-size: 15px;
 }
+
 .mostrar-menu,
 .esconder-menu {
     font-size: 13px;
@@ -57,16 +67,12 @@ body.background {
 .menu a:hover,
 .mostrar-menu:hover,
 .esconder-menu:hover {
-    color: #FFFFFF;
+    color: black; /* Cambiado a negro */
+    border-radius: 20px; /* Cambiado el valor para border-radius */
+    background-color: orange;
+    padding: 10px 20px;
 }
 
-
-/* style.css */
-
-@font-face {
-    font-family: 'Nunito';
-    src: url('./fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype'); 
-}
 .botton-reserva {
     font-family: 'Nunito', sans-serif;
     background-color: orange;
@@ -74,16 +80,16 @@ body.background {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 13px;
+    font-size: 16px; /* Ajusta el tamaño de fuente para una mejor legibilidad en dispositivos móviles */
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
     position: absolute;
     top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
-    width: 9%;
-    
+    width: 80%; /* Cambia el ancho para ocupar el 80% del contenedor en dispositivos móviles */
+    max-width: 280px; /* Limita el ancho máximo del botón */
 }
 
 /* Estilos para pantallas más pequeñas */
@@ -91,50 +97,24 @@ body.background {
     .botton-reserva {
         font-size: 12px;
         padding: 8px 16px;
-        top: 75%; /* Ajusta la posición vertical en pantallas pequeñas */
+        top: 75%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 }
-/* style.css */
-
-/* ... (otros estilos) ... */
-
-footer {
-    background-color: #001A57;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-footer h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-footer p {
-    font-size: 16px;
-    margin: 0;
-}
-
-/* Resto de tus estilos */
-
-
-/* style.css */
-
-/* ... (otros estilos) ... */
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Establece el alto mínimo del cuerpo para ocupar toda la ventana */
+    min-height: 100vh;
 }
 
 .content {
-    flex: 1; /* Permite que el contenido principal crezca y ocupe todo el espacio disponible */
+    flex: 1;
     padding: 20px;
 }
-.welcome-font{
+
+.welcome-font {
     width: 30%;
     position: absolute;
     top: 40%;
@@ -142,9 +122,8 @@ body {
     transform: translate(-50%, -50%);
 }
 
-
 footer {
-    background-image: url('./images/footer-background.png'); /* Cambia la ruta a la ubicación de tu imagen */
+    background-image: url('./images/footer-background.png');
     color: white;
     padding: 9px;
     text-align: center;
@@ -155,96 +134,48 @@ footer p {
     font-size: 9px;
     margin: 0;
 }
-
-/* inicio del formulario*/
-.form{ 
-    
-    background-color: #ffffff;
-    margin: auto;
+.overlay {
+    border-radius: 5%;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 90%;
-    max-width: 400px;
-    padding: 2em 2em;
-    border-radius: 10px;
-    box-shadow: 0 5px 10 -5px rgb(0 0 0 / 30%);
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.9); /* Blanco con transparencia del 90% */
+    z-index: 1; /* Asegura que la capa esté sobre otros elementos */
+}
+#h1-restaurantes {
+    font-family: 'Brittany', sans-serif;
+    font-size: 35px;
+    color: white;
     text-align: center;
-
+    margin-top: 50px;
+}
+.card {
+    border-radius: 5%;
+    flex: 1;
+    max-width: 5%;
+    padding: 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.car-rst1 {
+    border-radius: 5%;
+    flex: 1;
+    max-width: 24%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0; /* Ajusta el margen superior e inferior */
+    margin-left: 120px; /* Mueve la tarjeta hacia la derecha */
 }
 
-.formTitle{
-    font-family: 'Nunito', sans-serif;
-    font-size: 2rem;
-    margin-bottom: .5em;
-    color: #000000 ;
-}
-
-.formParagraph{
-    font-weight: 300;
-    color: #000000 ;
-}
-
-.formLink{
-    font-weight: 400;
-    color: #000000 ;
-}
-
-.formContainer{
-    margin-top: 3em;
-    display: grid;
-    gap: 1.5em;
-}
-
-.formGroup{
-    position: relative;
-    --color:#5757577e;
-}
-
-.formInput{
-    width: 100%;
-    background: none;
-    color: #706c6c;
-    font-size: 1rem;
-    padding: .6em .3em;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid var(--color);
-    font-family: 'Nunito', sans-serif;
-}
-
-.formInput:focus + .formLabel,
-.formInput :not(:placeholder-shown)+ .formLabel{
-    transform: translateY(-12px) scale(.7);
-    transform-origin:left top;
-    color: #3866f2;
-}
-
-.formLabel{
-    color: var(--color);
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 5px;
-    transform: translateY(10px);
-    transition: transform .5s, color .3s;
-
-}
-
-.formSubmit{
-    background: #3866f2;
-    color:#fff;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    padding: .8em 0;
-    border: none;
-    border-radius: .5em;
-}
-
-@media(max-widht:425px){
-    .formTitle{
-        font-size: 1.8rem;
-
-    }
-
+.car-rst1 img {
+    border-radius: 5%;
+    max-width: 100%;
+    height: auto;
 }
 
 
