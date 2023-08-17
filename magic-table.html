@@ -4,40 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Magic Table</title>
     <link rel="icon" href="./images/cubiertos.png" type="image/png">
+    <title>Magic Table</title>
 </head>
+<body class="background">
+
 <header>
     <div id="logo-div">
-        <img src="./images/logo_white.png" class="logo">
+        <a href="magic-table.html">
+            <img src="./images/logo_white.png" class="logo" alt="Magic Table Logo">
+        </a>
     </div>
     
     <input type="checkbox" id="check">
-    <label for="check" class="mostrar-menu">
-
-    </label>
+    <label for="check" class="mostrar-menu"></label>
+    
     <nav class="menu">
         <a href="#">Nosotros</a>
-        <a href="#">Restaurantes</a>
+        <a href="restaurants.html">Restaurantes</a>
         <a href="#">Ordenar</a>
         <a href="#">Cuenta</a>
-        <a href="inicio-Sesion.html">Inicio sesión</a>
+        <a href="#">Inicio sesión</a>
     </nav>
 </header>
 
-<body class="background">
-    <button class="botton-reserva">¡Ordena ya!</button>
 
-    <div class="content">
-        <div>
-            <img src="./images/welcome-font.png" class="welcome-font">
-        </div>
-        <!-- Contenido de tu página -->
+<button class="botton-reserva" onclick="window.location.href='restaurants.html'">¡Ordena ya!</button>
+<div class="content">
+    <div>
+        <img src="./images/welcome-font.png" class="welcome-font" alt="Welcome Font">
     </div>
-    
-    <footer>
-        <p>Correo electrónico: tu-correo@example.com</p>
-    </footer>
+    <!-- Contenido de tu página -->
+</div>
+
+<footer>
+    <p>Correo electrónico: tu-correo@example.com</p>
+</footer>
 
 </body>
 </html>
