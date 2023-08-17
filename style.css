@@ -177,5 +177,95 @@ footer p {
     max-width: 100%;
     height: auto;
 }
+/* Formularios*/
 
+.form{ 
+    
+    background-color: #ffffff;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 2em 2em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10 -5px rgb(0 0 0 / 30%);
+    text-align: center;
+
+}
+
+.formTitle{
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    margin-bottom: .5em;
+    color: #000000 ;
+}
+
+.formParagraph{
+    font-weight: 300;
+    color: #000000 ;
+}
+
+.formLink{
+    font-weight: 400;
+    color: #000000 ;
+}
+
+.formContainer{
+    margin-top: 3em;
+    display: grid;
+    gap: 1.5em;
+}
+
+.formGroup{
+    position: relative;
+    --color:#5757577e;
+}
+
+.formInput{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Nunito', sans-serif;
+}
+
+.formInput:focus + .formLabel,
+.formInput :not(:placeholder-shown)+ .formLabel{
+    transform: translateY(-12px) scale(.7);
+    transform-origin:left top;
+    color: #3866f2;
+}
+
+.formLabel{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+
+}
+
+.formSubmit{
+    background: #3866f2;
+    color:#fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+
+@media(max-widht:425px){
+    .formTitle{
+        font-size: 1.8rem;
+
+    }
+
+}
 
