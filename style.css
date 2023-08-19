@@ -11,59 +11,43 @@
 
 
 header {
-    padding: 10px 5%; /* Ajustado el padding a un valor relativo */
-    color: white;
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos del header se envuelvan en pantallas pequeñas */
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    font-family: 'Nunito', sans-serif;
+    
+    height: 100px;
+     background: transparent;
+     padding: 0 50px;
+     color: aliceblue;
+     display: flex;
+     justify-content: space-between;
+     align-items: center; 
 }
 
-nav.menu {
 
-    position: absolute;
-    top: 55px;
-    right: 700px; /* Ajustado el margen derecho a un valor relativo */
-    max-width: 600px; /* Limita el ancho máximo del menú */
-    width: 50%; /* Asegura que el menú ocupe el ancho completo */
-   
-}
 
 .logo {
     max-width: 25%;
     height: auto;
 }
 
-body.background {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('./images/background.png');
-    background-size: cover;
-    color: #ffffff;
-}
-
-.menu a {
+.menu a{
+    color:#fff;
     text-transform: uppercase;
-    color: white;
     text-decoration: none;
     padding: 0 10px;
-    transition: 0.4s;
-    font-size: 15px;
 }
 
-.mostrar-menu,
-.esconder-menu {
-    font-size: 13px;
+
+.mostrar-menu, .esconder-menu{
+    font-size: 30px;
     cursor: pointer;
+    display: none;
     transition: 0.4s;
 }
 
-#check {
-    display: none;
+.mostrar-menu{
+    order: 1;
 }
+
+
 
 .menu a:hover,
 .mostrar-menu:hover,
@@ -73,6 +57,68 @@ body.background {
     background-color: orange;
     padding: 10px 20px;
 }
+
+#check{
+    display: none;
+}
+
+/* Estilos para pantallas más pequeñas */
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover {
+    color: black; /* Cambiado a negro */
+    border-radius: 20px; /* Cambiado el valor para border-radius */
+    background-color: orange;
+    padding: 10px 20px;
+}
+
+#check{
+    display: none;
+}
+
+/* Estilos para pantallas más pequeñas */
+
+@media (max-width: 768px) {
+    .mostrar-menu,.esconder-menu {
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100px;
+        height: 100hv;
+        background: rgb(86,87,87);
+        left: 0;
+        /*right: -100%;*/
+        top:0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+
+
+    }
+}
+
+
+@media (max-width: 768px) {
+    .botton-reserva {
+        font-size: 12px;
+        padding: 8px 16px;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/*body */
 
 .botton-reserva {
     font-family: 'Nunito', sans-serif;
@@ -92,22 +138,13 @@ body.background {
     width: 80%; /* Cambia el ancho para ocupar el 80% del contenedor en dispositivos móviles */
     max-width: 280px; /* Limita el ancho máximo del botón */
 }
-
-/* Estilos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .botton-reserva {
-        font-size: 12px;
-        padding: 8px 16px;
-        top: 75%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+body.background {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('./images/background.png');
+    background-size: cover;
+    color: #ffffff;
 }
 
 .content {
@@ -270,3 +307,5 @@ footer p {
 
 
 }
+
+
