@@ -49,7 +49,7 @@ header {
 .menu a:hover,
 .mostrar-menu:hover,
 .esconder-menu:hover{
-    color: black; /* Cambiado a negro */
+    color: #fff; /* Cambiado a negro */
     border-radius: 20px; /* Cambiado el valor para border-radius */
     background-color: #001A57;
     padding: 10px 20px;
@@ -279,7 +279,7 @@ footer p {
 .formInput:not(:placeholder-shown) + .formLabel{
     transform: translateY(-12px) scale(.7);
     transform-origin:left top;
-    color: orange;
+    color: #001A57;
 }
 
 .formLabel{
