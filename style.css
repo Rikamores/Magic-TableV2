@@ -1,6 +1,7 @@
-* {
+*{
     margin: 0;
     padding: 0;
+    
 }
 
 @font-face { /*se utiliza para cargar fuentes personalizadas en una página web 
@@ -11,19 +12,17 @@
 
 
 header {
-    
     height: 100px;
-     background: transparent;
-     padding: 0 50px;
-     color: aliceblue;
-     display: flex;
+    background: transparent;
+    padding: 0 50px; /* Ajustado el padding a un valor relativo */
+    color: aliceblue;
+    display: flex;
      justify-content: space-between;
-     align-items: center; 
+     align-items: center;   
 }
 
-
-
-.logo {
+.logo
+{
     max-width: 25%;
     height: auto;
 }
@@ -33,8 +32,8 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     padding: 0 10px;
+    transition: 0.4s;
 }
-
 
 .mostrar-menu, .esconder-menu{
     font-size: 30px;
@@ -47,11 +46,9 @@ header {
     order: 1;
 }
 
-
-
 .menu a:hover,
 .mostrar-menu:hover,
-.esconder-menu:hover {
+.esconder-menu:hover{
     color: black; /* Cambiado a negro */
     border-radius: 20px; /* Cambiado el valor para border-radius */
     background-color: orange;
@@ -62,44 +59,44 @@ header {
     display: none;
 }
 
-/* Estilos para pantallas más pequeñas */
-.menu a:hover,
-.mostrar-menu:hover,
-.esconder-menu:hover {
-    color: black; /* Cambiado a negro */
-    border-radius: 20px; /* Cambiado el valor para border-radius */
-    background-color: orange;
-    padding: 10px 20px;
-}
-
-#check{
-    display: none;
-}
-
-/* Estilos para pantallas más pequeñas */
-
-@media (max-width: 768px) {
-    .mostrar-menu,.esconder-menu {
+@media(max-width:768px){
+    .mostrar-menu, .esconder-menu{
         display: block;
     }
-
     .menu{
         position: fixed;
-        width: 100px;
-        height: 100hv;
-        background: rgb(86,87,87);
-        left: 0;
-        /*right: -100%;*/
-        top:0;
+        width: 100%;
+        height: 100vh;
+        background: #001A57;
+        /*left: 0;*/
+        right: -100%; 
+        top: 0;
         text-align: center;
         padding: 100px 0px;
         z-index: 100;
         transition: 0.8s;
 
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
 
+     .menu a{
+        display: block;
+        padding: 20px;
+     }
+
+     .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+
+     }
+
+     #check:checked ~ .menu{
+        right: 0;
     }
 }
-
 
 @media (max-width: 768px) {
     .botton-reserva {
@@ -111,6 +108,7 @@ header {
     }
 }
 
+/*body */
 body {
     display: flex;
     flex-direction: column;
@@ -118,7 +116,7 @@ body {
 }
 
 
-/*body */
+
 
 .botton-reserva {
     font-family: 'Nunito', sans-serif;
@@ -160,6 +158,8 @@ body.background {
     transform: translate(-50%, -50%);
 }
 
+
+   /*foot */
 footer {
     background-image: url('./images/footer-background.png');
     color: white;
@@ -172,6 +172,8 @@ footer p {
     font-size: 9px;
     margin: 0;
 }
+
+/*Restauran*/
 .overlay {
     border-radius: 5%;
     position: fixed;
@@ -215,6 +217,9 @@ footer p {
     max-width: 100%;
     height: auto;
 }
+
+
+
 /* Inicio de Sesión*/
 
 .form{ 
@@ -307,5 +312,3 @@ footer p {
 
 
 }
-
-
