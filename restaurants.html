@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magic Table - Restaurantes</title>
     <link rel="stylesheet" href="style.css">
+    <title>Regístrate</title>
     <link rel="icon" href="./images/cubiertos.png" type="image/png">
 </head>
 <header>
@@ -29,22 +28,75 @@
 </nav>
 
 </header>
-<body class="background">
-    <div class="body-container">
-        
 
-        <section class="overlay">
-            <div class="car-rst1">
-                <img src="./images/rst1.jpg" alt="Imagen 1">
+<body class="background">
+
+        <form class="form">
+            <h2 class="formTitle">Regístrate</h2>
+            <p class="formParagraph">¿Ya tienes una cuenta? <a href="inicio-Sesion.html">Inicia sesión</a></p>
+
+            <div class="formContainer">
+
+                <div class="formGroup">
+                    <input type="text" id="name" class="formInput" 
+                      required placeholder=" ">
+                    <label for="name" class="formLabel">Nombre y Apellidos:</label>
+                    <span class="formLine"></span>
+                </div>
+
+                <div class="formGroup">
+                    <input type="tel" id="Telefono" class="formInput" 
+                    required="" placeholder=" " pattern="[0-9]+" minlength="10" maxlength="10" >
+                    <label for="user" class="formLabel">Telefono:</label>
+                    <span class="formLine"></span>
+                </div>
+
+                <div class="formGroup">
+                    <input type="email" id="email" class="formInput" 
+                    required placeholder=" ">
+                    <label for="user" class="formLabel">Correo:</label>
+                    <span class="formLine"></span>
+                </div>
+
+                <div class="formGroup">
+                    <input type="date" id="birthday" class="formInput" 
+                      required placeholder=" ">
+                    <label for="birthday" class="formLabel">Fecha de Cumpelaños:</label>
+                    <span class="formLine"></span>
+                </div>
+
+                <div class="formGroup">
+                    <input type="text" id="userName" class="formInput" 
+                      required placeholder="">
+                    <label for="userName" class="formLabel">Usuario:</label>
+                    <span class="formLine"></span>
+                </div>
+
+                <div class="formGroup">
+                    <input type="password" id="password" class="formInput"
+                    required="" minlength="8"  placeholder=" ">
+                    <label for="password" class="formLabel">Contraseña:</label>
+                    <span class="formLine"></span>
+                </div>
+
+                <div class="formGroup">
+                    <input type="password" id="passwordConfirm" class="formInput" 
+                    requiered="" minlength="8" placeholder=" ">
+                    <label for="password" class="formLabel">Confirmar contraseña:</label>
+                    <span class="formLine"></span>
+                </div>
+
+                <input type="submit" class="formSubmit" value="Registrarse"> 
+
             </div>
 
-        </section>
-        <h1 id="h1-restaurantes">¡Elige tu restaurante favorito!</h1>
-        <!-- Contenido de la página -->
-    </div>
-</body>
+ 
+        </form>
 
+</body>
 <footer>
      <p > Correo electrónico: tu-correo@example.com </p>
 </footer>
+
 </html>
+
