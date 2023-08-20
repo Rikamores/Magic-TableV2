@@ -51,7 +51,7 @@ header {
 .esconder-menu:hover{
     color: black; /* Cambiado a negro */
     border-radius: 20px; /* Cambiado el valor para border-radius */
-    background-color: orange;
+    background-color: #001A57;
     padding: 10px 20px;
 }
 
@@ -294,7 +294,7 @@ footer p {
 }
 
 .formSubmit{
-    background: orange;
+    background: #7B7B7B;
     color:#fff;
     font-family: 'Nunito', sans-serif;
     font-weight: 300;
