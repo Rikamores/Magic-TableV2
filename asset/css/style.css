@@ -1,13 +1,13 @@
 *{
     margin: 0;
     padding: 0;
+  
     
 }
 
-@font-face { /*se utiliza para cargar fuentes personalizadas en una página web 
-    para que puedan utilizarse en la presentación de contenido. */
+@font-face {
     font-family: 'Brittany';
-    src: url('./fonts/brittany_signature/BrittanySignature.ttf') format('truetype');
+    src: url('../fonts/brittany_signature/BrittanySignature.ttf') format('truetype');
 }
 
 
@@ -46,12 +46,10 @@ header {
     order: 1;
 }
 
-.menu a:hover,
-.mostrar-menu:hover,
-.esconder-menu:hover{
-    color: #fff; /* Cambiado a negro */
+.menu a:hover, .mostrar-menu:hover, .esconder-menu:hover{
+    color: #f5f5f5; 
     border-radius: 20px; /* Cambiado el valor para border-radius */
-    background-color: #001A57;
+    background-color:  #001A57;
     padding: 10px 20px;
 }
 
@@ -139,8 +137,9 @@ body {
 body.background {
     margin: 0;
     padding: 0;
+    /*background-color: aqua;*/
     font-family: Arial, sans-serif;
-    background-image: url('./images/background.png');
+    background-image: url('../images/background.png');
     background-size: cover;
     color: #ffffff;
 }
@@ -161,7 +160,7 @@ body.background {
 
    /*foot */
 footer {
-    background-image: url('./images/footer-background.png');
+    background-image: url('../images/footer-background.png');
     color: white;
     padding: 9px;
     text-align: center;
@@ -169,58 +168,102 @@ footer {
 
 footer p {
     font-family: cursive;
-    font-size: 9px;
+    font-size: 14px;
     margin: 0;
 }
 
-/*Restauran*/
-.overlay {
-    border-radius: 5%;
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 50%;
-    background-color: rgba(255, 255, 255, 0.9); /* Blanco con transparencia del 90% */
-    z-index: 1; /* Asegura que la capa esté sobre otros elementos */
+
+/*nosotros*/
+/* Estilos para el contenedor del contenido */
+.contenido {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+    padding: 20px; /* Espaciado interno */
+    background-color: transparent 0 0 no-repeat padding-box; /* Color de fondo */   
+    border-radius: 10px; /* Bordes redondeados */
 }
-#h1-restaurantes {
-    font-family: 'Brittany', sans-serif;
-    font-size: 35px;
-    color: white;
+
+#nosotrosh1{
     text-align: center;
-    margin-top: 50px;
+    color: #f0f0f0; /* Cambia el color del texto según tus preferencias */
+    margin-bottom: 20px; /* Espaciado inferior */
 }
-.card {
-    border-radius: 5%;
-    flex: 1;
-    max-width: 5%;
-    padding: 150px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+/* Estilos para el párrafo con el id "nosotros" */
+#nosotros {
+    text-align: justify; /* Alinear el texto a la izquierda */  
+    font-size: 20px; /* Tamaño de fuente */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #fdfdfd; /* Color del texto */ 
 }
-.car-rst1 {
-    border-radius: 5%;
-    flex: 1;
-    max-width: 24%;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+#subtitulos{
+    text-align: left; /* Alinear el texto a la izquierda */  
+    font-size: 20px; /* Tamaño de fuente */
+    line-height: 2; /* Espaciado entre líneas */
+    color: #fdfdfd; /* Color del texto */
+}
+/* Estilos para el título "Nosotros" */
+h1 {
+    font-size: 40px; /* Tamaño de fuente del título */
+    color: #ffffff; /* Color del título */
+    
+}
+
+
+/*Restaurantes*/
+
+.fila {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 70px 0; /* Ajusta el margen superior e inferior */
-    margin-left: 120px; /* Mueve la tarjeta hacia la derecha */
+    flex-wrap: wrap;
+    justify-content:center;
+    margin: 0 -10px; /* Para eliminar el espacio entre las columnas */
 }
 
-.car-rst1 img {
-    border-radius: 5%;
-    max-width: 100%;
+.galeria {
+    flex-basis: calc(25.33% - 15px); /* Ajustar el ancho de cada galería */
+    margin: 15px; /* Espacio entre las galerías */
+    overflow: hidden; /* Oculta el contenido que se desborde */
+    border: 1px solid #ccc; /* Agrega un borde a las galerías */
+    border-radius: 5px; /* Redondea las esquinas del borde */
+   
+}
+
+.galeria img {
+    width: 100%;
     height: auto;
+    display: block;
+}
+
+/* Estilos para el pie de cada galería */
+.pieR {
+    padding: 8px;
+    text-align: center;
+}
+
+/* Estilos adicionales para hacer que las imágenes sean más atractivas */
+.galeria img:hover {
+    transform: scale(1.05); /* Hace que la imagen se agrande ligeramente al pasar el mouse por encima */
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para el encabezado de la página */
+#h1-restaurantes {
+    text-align: center;
+   margin: 20px 0;
+    color: #f0f0f0; /* Cambia el color del texto según tus preferencias */
+}
+
+#tituloR{
+    text-align: center;
+    color: #f0f0f0; /* Cambia el color del texto según tus preferencias */  
+    
 }
 
 
 
-/* Inicio de Sesión*/
+
+/*Formularios de Inicio de Sesión, Registro*/
 
 .form{ 
     

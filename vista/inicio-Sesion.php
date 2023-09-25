@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
     <title>Inicio Sesión</title>
-    <link rel="icon" href="./images/cubiertos.png" type="image/png">
+    <link rel="icon" href="../asset/images/cubiertos.png" type="image/png">
 </head>
 <header>
   
-    <a href="magic-table.html">
-        <img src="./images/logo_white.png" class="logo" alt="Magic Table Logo">
+    <a href="../index.php">
+        <img src="../asset/images/logo_white.png" class="logo" alt="Magic Table Logo">
     </a>
    
 
@@ -18,11 +18,10 @@
 <label for="check" class="mostrar-menu">&#8801</label>
 
 <nav class="menu">
-    <a href="#">Nosotros</a>
-    <a href="restaurants.html">Restaurantes</a>
+    <a href="./nosotros.php">Nosotros</a>
+    <a href="restaurants.php">Restaurantes</a>
     <a href="#">Ordenar</a>
-    <a href="#">Cuenta</a>
-    <a href="inicio-Sesion.html">Inicio sesión</a>
+    <a href="inicio-Sesion.php">Inicio sesión</a>
     <label for="check" class="esconder-menu">
         &#215
     </label>
@@ -35,13 +34,14 @@
     
 
         <form class="form">
+        <a href="./index.php">
+        <img src="../asset/images/logo.png" class="logo" alt="Magic Table Logo">
+    </a>
             <h2 class="formTitle">Inicia Sesión</h2>
-            <p class="formParagraph">¿Aún no tienes una cuenta? <a href="registro.html">Creala Aquí</a></p>
+            <p class="formParagraph">¿Aún no tienes una cuenta? <a href="registro.php">Creala Aquí</a></p>
 
             <div class="formContainer">
                 
-               
-
                 <div class="formGroup">
                     <input type="user" id="user" class="formInput" 
                      minlength="6"  maxlength="10" placeholder=" ">
@@ -65,9 +65,11 @@
            
             
         </form> 
+        <br>
 
 </body>
 <footer>
+    
      <p > Correo electrónico: tu-correo@example.com </p>
 </footer>
 
