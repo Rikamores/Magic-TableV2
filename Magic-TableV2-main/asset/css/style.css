@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+  
+    
+}
+
+@font-face {
+    font-family: 'Brittany';
+    src: url('../fonts/brittany_signature/BrittanySignature.ttf') format('truetype');
+}
+
+
+header {
+    height: 100px;
+    background: transparent;
+    padding: 0 50px; /* Ajustado el padding a un valor relativo */
+    color: aliceblue;
+    display: flex;
+     justify-content: space-between;
+     align-items: center;   
+}
+
+.logo
+{
+    max-width: 25%;
+    height: auto;
+}
+
+.menu a{
+    color:#fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu, .esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu{
+    order: 1;
+}
+
+.menu a:hover, .mostrar-menu:hover, .esconder-menu:hover{
+    color: #f5f5f5; 
+    border-radius: 20px; /* Cambiado el valor para border-radius */
+    background-color:  #001A57;
+    padding: 10px 20px;
+}
+
+#check{
+    display: none;
+}
+
+@media(max-width:768px){
+    .mostrar-menu, .esconder-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #001A57;
+        /*left: 0;*/
+        right: -100%; 
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+     .menu a{
+        display: block;
+        padding: 20px;
+     }
+
+     .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+
+     }
+
+     #check:checked ~ .menu{
+        right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .botton-reserva {
+        font-size: 12px;
+        padding: 8px 16px;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/*body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+
+.botton-reserva {
+    font-family: 'Nunito', sans-serif;
+    background-color: orange;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; /* Ajusta el tamaño de fuente para una mejor legibilidad en dispositivos móviles */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 80%; /* Cambia el ancho para ocupar el 80% del contenedor en dispositivos móviles */
+    max-width: 280px; /* Limita el ancho máximo del botón */
+}
+
+body.background {
+    margin: 0;
+    padding: 0;
+    /*background-color: aqua;*/
+    font-family: Arial, sans-serif;
+    background-image: url('../images/background.png');
+    background-size: cover;
+    color: #ffffff;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.welcome-font {
+    width: 30%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+   /*foot */
+footer {
+    background-image: url('../images/footer-background.png');
+    color: white;
+    padding: 9px;
+    text-align: center;
+}
+
+footer p {
+    font-family: cursive;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/*nosotros*/
+/* Estilos para el contenedor del contenido */
+.contenido {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+    padding: 20px; /* Espaciado interno */
+    background-color: transparent 0 0 no-repeat padding-box; /* Color de fondo */   
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+#nosotrosh1{
+    text-align: center;
+    color: #f0f0f0; /* Cambia el color del texto según tus preferencias */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos para el párrafo con el id "nosotros" */
+#nosotros {
+    text-align: justify; /* Alinear el texto a la izquierda */  
+    font-size: 20px; /* Tamaño de fuente */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #fdfdfd; /* Color del texto */ 
+}
+
+#subtitulos{
+    text-align: left; /* Alinear el texto a la izquierda */  
+    font-size: 20px; /* Tamaño de fuente */
+    line-height: 2; /* Espaciado entre líneas */
+    color: #fdfdfd; /* Color del texto */
+}
+/* Estilos para el título "Nosotros" */
+h1 {
+    font-size: 40px; /* Tamaño de fuente del título */
+    color: #ffffff; /* Color del título */
+    
+}
+
+
+/*Restaurantes*/
+
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin: 0 -10px; /* Para eliminar el espacio entre las columnas */
+}
+
+.galeria {
+    flex-basis: calc(25.33% - 15px); /* Ajustar el ancho de cada galería */
+    margin: 15px; /* Espacio entre las galerías */
+    overflow: hidden; /* Oculta el contenido que se desborde */
+    border: 1px solid #ccc; /* Agrega un borde a las galerías */
+    border-radius: 5px; /* Redondea las esquinas del borde */
+   
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos para el pie de cada galería */
+.pieR {
+    padding: 8px;
+    text-align: center;
+}
+
+/* Estilos adicionales para hacer que las imágenes sean más atractivas */
+.galeria img:hover {
+    transform: scale(1.05); /* Hace que la imagen se agrande ligeramente al pasar el mouse por encima */
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para el encabezado de la página */
+#h1-restaurantes {
+    text-align: center;
+   margin: 20px 0;
+    color: #f0f0f0; /* Cambia el color del texto según tus preferencias */
+}
+
+#tituloR{
+    text-align: center;
+    color: #f0f0f0; /* Cambia el color del texto según tus preferencias */  
+    
+}
+
+
+
+
+/*Formularios de Inicio de Sesión, Registro*/
+
+.form{ 
+    
+    background-color: #ffffff;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 2em 2em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10 -5px rgb(0 0 0 / 30%);
+    text-align: center;
+
+}
+
+.formTitle{
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    margin-bottom: .5em;
+    color: #001A57 ;
+}
+
+.formParagraph{
+    font-weight: 300;
+    color: #001A57;
+}
+
+.formLink{
+    font-weight: 400;
+    color: #000000 ;
+}
+
+.formContainer{
+    margin-top: 3em;
+    display: grid;
+    gap: 1.5em;
+}
+
+.formGroup{
+    position: relative;
+    --color:#5757577e;
+}
+
+.formInput{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Nunito', sans-serif;
+}
+
+.formInput:focus + .formLabel,
+.formInput:not(:placeholder-shown) + .formLabel{
+    transform: translateY(-12px) scale(.7);
+    transform-origin:left top;
+    color: #001A57;
+}
+
+.formLabel{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+
+}
+
+.formSubmit{
+    background: #7B7B7B;
+    color:#fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+
+@media(max-widht:425px){
+    .formTitle{
+        font-size: 1.8rem;
+
+    }
+
+
+}
